@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> · <strong>简体中文</strong>
+  <strong>简体中文</strong>
 </p>
 
 <p align="center">
@@ -35,10 +35,6 @@
   <a href="https://github.com/mastra-ai/mastra"><img src="https://img.shields.io/badge/Mastra-agent%20runtime-111827" alt="Mastra agent runtime" /></a>
   <a href="https://github.com/ag-ui-protocol/ag-ui"><img src="https://img.shields.io/badge/AG--UI-event%20stream-6f42c1" alt="AG-UI event stream" /></a>
   <a href="https://github.com/vadimdemedes/ink"><img src="https://img.shields.io/badge/Ink-terminal%20UI-0f766e" alt="Ink terminal UI" /></a>
-</p>
-
-<p align="center">
-  <img src="docs/assets/readme/gui-demo.gif" alt="duduData Web 工作台演示" width="100%">
 </p>
 
 ---
@@ -186,27 +182,13 @@ Coding agent 改代码，SQL chatbot 回答问题，duduData 跑数据任务—�
 4. **沉淀产出** — 结果进入表格、图表、报告或文件，成为团队可引用的资产。
 5. **回放复盘** — Web、TUI、API 共用同一条 run history，随时回看每一步的依据。
 
-<p align="center">
-  <img src="docs/assets/readme/runtime-flow.png" alt="duduData 运行流程" width="100%">
-</p>
-
 ## 🖥️ 不止一个聊天框
 
 **Web 工作台**适合日常分析和演示，**TUI** 适合终端和远程服务器，**API / CopilotKit / AG-UI** 让你把同一套可信运行时嵌进自己的产品。
 
-<p align="center">
-  <a href="docs/assets/readme/tui-demo.mp4">
-    <img src="docs/assets/readme/tui-demo.gif" alt="duduData TUI 演示" width="100%">
-  </a>
-</p>
-
 ## 🗄️ 接入现有数据栈，不重构
 
 通过 Data Gateway 适配器接入：内置 DTC 增长经营复盘案例开箱即用；DuckDB、SQLite、CSV、Excel、PostgreSQL、MySQL 适合本地试用；云数仓、搜索引擎和 NoSQL 按需配置服务与凭据。
-
-<p align="center">
-  <img src="docs/assets/readme/database-wall.png" alt="duduData 支持的数据源" width="100%">
-</p>
 
 完整列表见 [支持的数据源](docs/zh/reference/supported-datasources.md)。
 
@@ -255,20 +237,7 @@ duduData 迭代很快，小而聚焦的 PR 最容易被合入：
 
 加入 duduData 社区，和我们讨论产品、路线图和落地实践；也欢迎通过 issue 和 discussion 反馈问题、提出想法。
 
-<table align="center">
-  <tr>
-    <td align="center"><strong>QQ 交流群</strong></td>
-    <td align="center"><strong>Slack Community</strong></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/assets/readme/community-qq-qrcode.png" alt="duduData QQ 交流群二维码" width="220"></td>
-    <td align="center"><img src="docs/assets/readme/community-slack-qrcode.png" alt="duduData Slack 社区二维码" width="300"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>交流群号</strong><br><code>1048076064</code></td>
-    <td align="center"><a href="https://join.slack.com/t/datafoundry-7bb8405/shared_invite/zt-42qikc65e-DwA~8ltIri_WYWWpRMjCFQ"><strong>加入 Slack</strong></a></td>
-  </tr>
-</table>
+QQ 交流群：`1048076064`。Slack 社区：[加入 Slack](https://join.slack.com/t/datafoundry-7bb8405/shared_invite/zt-42qikc65e-DwA~8ltIri_WYWWpRMjCFQ)。
 
 ## 🙏 致谢
 

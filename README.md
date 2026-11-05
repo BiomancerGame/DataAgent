@@ -1,28 +1,28 @@
 <h1 align="center">duduData</h1>
 
 <p align="center">
-  An enterprise-grade Data Agent workbench — it reads business definitions through unified semantics, runs complex multi-table, multi-step analysis inside read-only boundaries,<br />
-  and keeps every step auditable and replayable, turning one question into a trustworthy analysis.
+  企业级 Data Agent 工作台 —— 用统一语义读懂业务口径，在只读安全边界内执行多表、多步的复杂分析，<br />
+  每一步可审计、可回放，把一句提问变成一次可信的数据分析。
 </p>
 
 <p align="center">
-  <strong>28 datasource types out of the box · Enterprise semantics & context · Self-hosted · Multi-model · Fully auditable</strong>
+  <strong>28 类数据源开箱接入 · 企业语义与上下文组织 · 私有化部署 · 多模型适配 · 全程审计可追溯</strong>
 </p>
 
 <p align="center">
-  <strong>English</strong> · <a href="README_zh.md">简体中文</a>
+  <strong>简体中文</strong>
 </p>
 
 <p align="center">
-  <a href="#-formal-deploy"><strong>Quick Start</strong></a>
+  <a href="#-正式态跑通"><strong>快速开始</strong></a>
   ·
-  <a href="https://datagallery-lab.github.io/datafoundry/"><strong>Docs</strong></a>
+  <a href="https://datagallery-lab.github.io/datafoundry/"><strong>在线文档</strong></a>
   ·
-  <a href="docs/en/reference/supported-datasources.md"><strong>Supported Data Sources</strong></a>
+  <a href="docs/zh/reference/supported-datasources.md"><strong>支持的数据源</strong></a>
   ·
-  <a href="#️-roadmap"><strong>Roadmap</strong></a>
+  <a href="#️-路线图"><strong>路线图</strong></a>
   ·
-  <a href="#-contributing"><strong>Contributing</strong></a>
+  <a href="#-参与贡献"><strong>参与贡献</strong></a>
 </p>
 
 <p align="center">
@@ -37,45 +37,41 @@
   <a href="https://github.com/vadimdemedes/ink"><img src="https://img.shields.io/badge/Ink-terminal%20UI-0f766e" alt="Ink terminal UI" /></a>
 </p>
 
-<p align="center">
-  <img src="docs/assets/readme/gui-demo.gif" alt="duduData Web workbench demo" width="100%">
-</p>
-
 ---
 
-## 🤔 What Is duduData
+## 🤔 duduData 是什么
 
-When teams let AI query enterprise databases, the real worry is never "can the model write SQL." It is: **does it understand business definitions? Could it mutate production data? Could credentials leak into context? Can a conclusion be verified after the fact?**
+让 AI 直接查企业数据库，团队最担心的从来不是「模型会不会写 SQL」，而是：**它懂不懂业务口径？会不会误改生产数据？凭据会不会漏进上下文？结论出了问题能不能复盘？**
 
-Most tools reduce the problem to `prompt → SQL → answer` — impressive in a demo, dead on arrival in the enterprise. duduData takes a different path: **it puts the agent inside a semantic, policy-aware, evidence-preserving data task system**, upgrading natural-language analytics into controllable, trustworthy, verifiable data work.
+大多数工具把问题简化成 `prompt → SQL → answer`，demo 惊艳，进企业就卡死。duduData 走另一条路：**把 Agent 放进一个有语义、有权限、有证据链的数据任务系统里**，让「自然语言问数」升级成可控、可信、可验证的数据工作。
 
-## ✨ Core Capabilities
+## ✨ 核心能力
 
-- 🗄️ **28 datasource types, ready out of the box** — From PostgreSQL, MySQL, Snowflake, BigQuery, and ClickHouse to MongoDB, Redis, and Elasticsearch: connect your existing data stack quickly, cut integration cost, and get the agent into real business analysis faster.
-- 🧠 **Enterprise semantics and context organization** — Manage schema, metric definitions, and field relationships in one place, so terms like "GMV" and "retention" resolve to enterprise-approved tables, fields, and definitions — fewer guessed fields, wrong joins, and definition drift, and fundamentally better accuracy.
-- 🏠 **Self-hosted deployment and multi-model support** — Run it inside your own boundary so data never leaves; on the model side, any OpenAI-compatible provider works (Qwen, DeepSeek, GPT, ...), letting you balance security, cost, latency, and quality per scenario.
-- 🔒 **Safe by default, auditable throughout** — Read-only queries, credential isolation, field masking, row limits, and timeouts by default; SQL, tool calls, and event streams are fully persisted and replayable, so every conclusion is backed by evidence.
-- 🧩 **Deep optimization for complex data tasks** — Built for multi-table, multi-field, long-horizon analysis and multi-step reasoning: complex questions get decomposed, verified, and converged into trustworthy conclusions, materialized as tables, charts, and reports the team can reuse.
+- 🗄️ **28 类数据源，开箱接入** — 从 PostgreSQL、MySQL 到 Snowflake、BigQuery、ClickHouse，再到 MongoDB、Redis、Elasticsearch，快速打通企业现有数据栈，大幅降低数据接入和适配成本，让 Agent 更快进入真实业务分析。
+- 🧠 **企业语义与上下文组织** — 统一管理 schema、指标口径和字段关系，让「GMV」「复购率」落到企业认可的表、字段和口径上，减少字段猜测、错误关联和口径偏差，从根上提升分析准确性。
+- 🏠 **私有化部署与多模型适配** — 支持本地自托管，数据不出企业边界；模型侧兼容任意 OpenAI-compatible 服务（Qwen、DeepSeek、GPT……），按场景平衡安全、成本、延迟和效果。
+- 🔒 **安全可控，审计可追溯** — 默认只读查询、凭据隔离、字段脱敏、行数限制和超时控制；SQL、工具调用和事件流全程留痕、可回放，让每个结论都有据可查。
+- 🧩 **复杂数据任务深度优化** — 面向多表、多字段、长程分析和多步骤推理，把复杂问题逐步拆解、验证并收敛到可信结论，最终沉淀为表格、图表和报告等团队资产。
 
-## 🆕 What's New In v0.2.0
+## 🆕 v0.2.0 新能力
 
-duduData 0.2 turns the first usable workbench into a more complete, stateful data-agent workflow:
+duduData 0.2 在首个可用版本上，进一步补齐了有状态、可追溯的 Data Agent 工作流：
 
-- **Branchable, concurrent analysis** — Keep multiple sessions running, queue follow-up prompts, restore completed work, and branch from an earlier question or checkpoint without overwriting the original path.
-- **Evidence-first follow-ups** — Reference a complete output or a selected table/text region in the next question; resolved evidence is carried into the governed run context with diagnostics.
-- **Semantic trace and DataLink integration** — Inspect checkpoint-backed run structure in a semantic Trace DAG. Connect an external DataLink service to map tables and columns to business concepts, entities, joinable paths, and confidence-scored relationships for stronger agent grounding.
-- **Reusable outputs and workspace assets** — Preview and export tables, charts, reports, SQL, and files; upload files into an active session, then promote supported files for reuse across sessions.
-- **Production-facing Web foundation** — Built-in password authentication, same-origin API proxying, bilingual UI, model connection tests, onboarding, and an auto-provisioned DTC growth analysis case.
+- **可分支的并发分析** — 多个会话可同时运行，运行中可排队后续问题；恢复历史后，可从早期问题或 checkpoint 创建新分支，不覆盖原分析路径。
+- **证据驱动的追问** — 可将完整产出，或选中的表格区域、文本片段引用到下一个问题；证据解析结果和诊断信息会进入受控 run context。
+- **语义 Trace 与 DataLink 集成** — 通过基于 checkpoint 的语义 Trace DAG 复盘执行结构；连接外部 DataLink 服务，把表和字段映射到业务概念、实体、可 JOIN 路径和带置信度的关系，为 Agent 提供更强语义支撑。
+- **可复用的产出与工作区资产** — 统一预览和导出表格、图表、报告、SQL 和文件；文件可先上传到当前会话，再提升为跨会话复用的工作区资产。
+- **面向正式部署的 Web 基础** — 内置密码认证、同源 API 代理、中英双语界面、模型连接测试、首次引导，并自动准备 DTC 增长分析案例。
 
-See the [v0.2.0 release notes](docs/en/releases/v0.2.0.md) for the complete capability and documentation audit.
+完整能力与文档盘点见 [v0.2.0 发布说明](docs/zh/releases/v0.2.0.md)。
 
-## 🚀 Formal deploy
+## 🚀 正式态跑通
 
-Formal mode has two paths (do **not** run `npm run dev`). Docker / Compose is not provided in this release.
+正式态有两条路径（都不要跑 `npm run dev`）。本版本不提供 Docker / Compose。
 
-### Recommended: Ubuntu / Debian one-click
+### 推荐：Ubuntu / Debian 一键部署
 
-`./deploy.sh` generates configuration, installs dependencies, builds (Web, API, and TUI), and starts Web + API as a detached background process — closing the terminal does not stop the stack. The TUI is built and ready but is a foreground client: start it in another terminal with `./deploy.sh tui` (or `npm run start:tui`); it does **not** stay running with the stack. DataLink is an **external** component (not started by deploy) — connect it later via MCP in the Web UI if needed. No model key is required during deploy — create and enable a model profile in the Web UI after login. Does **not** support native Windows / macOS.
+`./deploy.sh` 自动生成配置、安装依赖、构建（含 Web、API 与 TUI），并以 detached 后台进程启动 Web + API——关闭终端一般不会停止服务。TUI 会在部署时构建就绪，但它是前台交互客户端：请另开终端执行 `./deploy.sh tui`（或 `npm run start:tui`），**不会**随 stack 后台常驻。DataLink 为**外置**组件（deploy 不会安装或启动）——如需使用，稍后在 Web 的 MCP 配置中连接外部服务即可。部署时不要求填写模型 Key——登录后在 Web 中创建并启用模型即可。**不支持**原生 Windows / macOS。
 
 ```bash
 git clone https://github.com/datagallery-lab/datafoundry.git
@@ -83,13 +79,13 @@ cd datafoundry
 ./deploy.sh
 ```
 
-If a complete `.env` already exists, interactive deploy skips the configuration questions. To change ports or the public URL (secrets are preserved; `.env` is backed up first):
+若已有完整 `.env`，交互部署会跳过配置问答。要改端口或公开访问地址时（会保留密钥并先备份 `.env`）：
 
 ```bash
 ./deploy.sh deploy --reconfigure
 ```
 
-Common management commands:
+常用管理命令：
 
 ```bash
 ./deploy.sh status
@@ -97,14 +93,14 @@ Common management commands:
 ./deploy.sh stop
 ./deploy.sh logs
 ./deploy.sh doctor
-./deploy.sh tui      # optional: foreground TUI client (API must already be up)
+./deploy.sh tui      # 可选：前台启动 TUI（需 API 已在运行）
 ```
 
-Open `http://127.0.0.1:3000/login`, register or sign in, create an OpenAI-compatible model profile, then go to `/data-tasks`. For remote hosts set `AUTH_PUBLIC_BASE_URL`. Re-running `./deploy.sh deploy` uses a maintenance window (stop the managed process group before install/build).
+打开 `http://127.0.0.1:3000/login` 注册登录，在模型配置中创建 OpenAI-compatible Profile，然后进入 `/data-tasks`。远程部署请设置 `AUTH_PUBLIC_BASE_URL`；重复执行 `./deploy.sh deploy` 会进入维护窗口（先停止旧进程再安装/构建）。
 
-### Windows / macOS / other: manual npm
+### Windows / macOS / 其他：手动 npm
 
-On native Windows, macOS, or other non-Ubuntu/Debian hosts, use manual npm. Install and run in the same environment; on Windows, do not share `node_modules` between Windows and WSL.
+原生 Windows、macOS 或其他非 Ubuntu/Debian 环境请用手动 npm。请在同一环境内安装和运行；Windows 用户不要在 Windows 和 WSL 之间共用 `node_modules`。
 
 ```bash
 git clone https://github.com/datagallery-lab/datafoundry.git
@@ -114,21 +110,21 @@ cp .env.example .env
 cp apps/web/.env.example apps/web/.env.local
 ```
 
-Configure any OpenAI-compatible model in the root `.env`, plus auth for formal test or real production (sample defaults lean formal test):
+在根目录 `.env` 配置模型，并按正式测试或真实生产填好认证（样例默认偏正式测试）：
 
 ```bash
 LLM_PROVIDER=openai-compatible
-LLM_MODEL=qwen-plus                # or deepseek-chat, gpt-4o, ...
+LLM_MODEL=qwen-plus                # 或 deepseek-chat、gpt-4o……
 LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 LLM_API_KEY=replace-with-your-key
 
 AUTH_SESSION_SECRET=replace-with-at-least-32-random-characters
-AUTH_PUBLIC_BASE_URL=http://127.0.0.1:3000   # real production: https://your.domain
+AUTH_PUBLIC_BASE_URL=http://127.0.0.1:3000   # 真实生产改为 https://你的域名
 AUTH_REGISTRATION_MODE=open
-AUTH_EMAIL_DELIVERY=test                     # real production: smtp + AUTH_SMTP_*
+AUTH_EMAIL_DELIVERY=test                     # 真实生产改为 smtp，并填 AUTH_SMTP_*
 ```
 
-`apps/web/.env.local`:
+`apps/web/.env.local`：
 
 ```bash
 NEXT_PUBLIC_AGENT_RUNTIME_URL=
@@ -136,7 +132,7 @@ NEXT_PUBLIC_CONFIG_API_URL=
 API_PROXY_TARGET=http://127.0.0.1:8787
 ```
 
-Build and start:
+构建并启动：
 
 ```bash
 npm run build
@@ -144,146 +140,118 @@ npm run build:web
 npm run start        # Web :3000 + API :8787
 ```
 
-Open `http://127.0.0.1:3000/login`, register or sign in, go to `/data-tasks`, and ask:
+打开 `http://127.0.0.1:3000/login` 注册登录后进入 `/data-tasks`，提问：
 
 ```text
-Show me the tables in this datasource and explain the main fields of each.
+帮我查看数据源里有哪些表，并说明每张表的主要字段。
 ```
 
-You will see the full chain: schema inspection → read-only SQL → SQL audit → table output → replayable run history.
+你会看到完整的一条链路：schema 检查 → 只读 SQL → SQL 审计 → 表格产出 → 可回放的 run history。
 
-For real production, also configure SMTP and a reverse proxy: [`deploy/nginx.datafoundry.conf.example`](deploy/nginx.datafoundry.conf.example) (gzip/brotli static assets; keep `/api/copilotkit` uncompressed and unbuffered for SSE).
+真实生产请再配 SMTP 与反代：[`deploy/nginx.datafoundry.conf.example`](deploy/nginx.datafoundry.conf.example)（静态 gzip/brotli；`/api/copilotkit` 关压缩与缓冲以保护 SSE）。
 
-> Full steps, the two-environment matrix, and optional external DataLink notes: [Quick Start](docs/en/quick-start.md). Contributor hot-reload (`npm run dev`) is appendix-only. Connect your own PostgreSQL / MySQL / CSV and more: [Data Sources guide](docs/en/guides/data-sources.md).
+> 完整步骤与两种环境对照见 [快速开始](docs/zh/quick-start.md)；贡献者热更新（`npm run dev`）仅见该文档附录。接入自己的 PostgreSQL / MySQL / CSV 等见 [数据源指南](docs/zh/guides/data-sources.md)。
 
+## 🆚 和 Coding Agent、SQL Chatbot 有什么不同
 
-## 🆚 How It Differs From Coding Agents And SQL Chatbots
+Coding agent 改代码，SQL chatbot 回答问题，duduData 跑数据任务——三者的工作对象、风险边界和产出完全不同：
 
-Coding agents change code, SQL chatbots answer questions, duduData runs data tasks — three different operating objects, risk boundaries, and outputs:
-
-| | Works on | Main risk | Output |
+| | 工作对象 | 核心风险 | 产出 |
 | --- | --- | --- | --- |
-| Coding agent | Repos, tests, PRs | Breaking code | Patch, commit, PR |
-| SQL chatbot | Prompt, SQL, answer | Wrong tables, unsafe access, leaked credentials, no replay | A SQL snippet or an answer |
-| **duduData** | Datasources, files, knowledge, tools, task state | Production data boundaries, business semantics, audit evidence | **Replayable data tasks** + SQL audit + tables / charts / reports |
+| Coding agent | 代码仓、测试、PR | 改错代码 | patch、commit、PR |
+| SQL chatbot | prompt、SQL、回答 | 猜错表、越权、凭据泄漏、不可复盘 | 一段 SQL 或一段回答 |
+| **duduData** | 数据源、文件、知识库、工具、任务状态 | 生产数据边界、业务口径、审计证据 | **可回放的数据任务** + SQL 审计 + 表格 / 图表 / 报告 |
 
-On data tasks specifically, duduData's core advantages over a general-purpose coding agent are:
+具体到数据任务上，duduData 相比通用 coding agent 的核心优势是：
 
-- **Accuracy, from data constraints** — Pointed at a database, a coding agent tends to guess tables, fields, and definitions; duduData enforces schema-first analysis and constrains query paths through Data Gateway, cutting guessed fields and wrong joins.
-- **Safety, from controlled execution** — Coding agents run commands and write files: powerful, but high-risk against enterprise data. duduData defaults to read-only SQL, credential isolation, field masking, row limits, timeouts, and audit — built for real data environments.
-- **Speed, from a converging task path** — Not because the model reasons faster, but because datasource selection, schema caching, context budgeting, tool policy, and the artifact pipeline eliminate wasted attempts, so analysis converges on results sooner.
-- **Complex tasks, from data-workflow design** — Coding agents excel at code engineering; duduData is built for analysis across many tables, fields, and metrics plus knowledge bases, files, and report outputs, chaining "query, verify, explain, materialize" into one complete flow.
-- **Adoption, from an enterprise runtime** — This is not a demo: the Web workbench, TUI, REST API, CopilotKit / AG-UI, Data Gateway, Skills, MCP, Files, Artifacts, and Metadata combine into an operating foundation for data agents.
+- **精度优势，来自数据约束** — coding agent 直接面对数据库时容易猜表、猜字段、猜口径；duduData 强制 schema-first，并通过 Data Gateway 约束查询路径，减少字段猜测和错误关联。
+- **安全优势，来自受控执行** — coding agent 能执行命令、读写文件，能力强但对企业数据风险更高；duduData 默认只读 SQL、凭据隔离、字段脱敏、行数限制、超时和审计，更适合真实数据环境。
+- **性能优势，来自任务链路收敛** — 不靠模型推理天然更快，而是通过数据源选择、schema 缓存、上下文预算、工具策略和 artifact 流程减少无效尝试，让分析更快收敛到结果。
+- **复杂任务优势，来自数据工作流设计** — coding agent 擅长代码工程；duduData 面向多表、多字段、多指标、知识库、文件和报告产出的分析任务，把「查数、验证、解释、沉淀产出」串成完整流程。
+- **落地优势，来自企业运行时** — 这不是一个 demo，而是 Web 工作台、TUI、REST API、CopilotKit / AG-UI、Data Gateway、Skill、MCP、Files、Artifacts、Metadata 组合成的数据 Agent 操作底座。
 
-## ⚙️ How A Data Task Runs
+## ⚙️ 一条数据任务如何跑完
 
 ```text
-Ask → Align semantics → Execute under control → Materialize output → Replay & review
+提出问题 → 对齐语义 → 受控执行 → 沉淀产出 → 回放复盘
 ```
 
-1. **Define the task** — Pick datasources, files, knowledge, and tools, then describe the business question in natural language.
-2. **Align meaning with structure** — The agent inspects schema and available context first, grounding terms like "GMV" or "retention" in real tables and fields.
-3. **Execute under control** — Data Gateway runs queries inside a read-only boundary with SQL guardrails, row limits, timeouts, and masking; every SQL statement leaves an audit record.
-4. **Materialize output** — Results become tables, charts, reports, or files — assets the team can cite.
-5. **Replay and review** — Web, TUI, and API share one run history, so every step's evidence is always one click away.
+1. **定义任务** — 选择数据源、文件、知识库和工具，用自然语言描述业务问题。
+2. **对齐语义与结构** — Agent 先检查 schema 和可用上下文，把「GMV」「复购率」这类业务词落到真实表和字段上。
+3. **受控执行** — Data Gateway 在只读边界内执行查询，统一处理 SQL guard、行数限制、超时和脱敏，每条 SQL 留审计日志。
+4. **沉淀产出** — 结果进入表格、图表、报告或文件，成为团队可引用的资产。
+5. **回放复盘** — Web、TUI、API 共用同一条 run history，随时回看每一步的依据。
 
-<p align="center">
-  <img src="docs/assets/readme/runtime-flow.png" alt="duduData runtime flow" width="100%">
-</p>
+## 🖥️ 不止一个聊天框
 
-## 🖥️ More Than A Chat Box
+**Web 工作台**适合日常分析和演示，**TUI** 适合终端和远程服务器，**API / CopilotKit / AG-UI** 让你把同一套可信运行时嵌进自己的产品。
 
-The **Web workbench** fits day-to-day analysis and demos, the **TUI** fits terminals and remote servers, and the **API / CopilotKit / AG-UI** path lets you embed the same trusted runtime into your own product.
+## 🗄️ 接入现有数据栈，不重构
 
-<p align="center">
-  <a href="docs/assets/readme/tui-demo.mp4">
-    <img src="docs/assets/readme/tui-demo.gif" alt="duduData TUI demo" width="100%">
-  </a>
-</p>
+通过 Data Gateway 适配器接入：内置 DTC 增长经营复盘案例开箱即用；DuckDB、SQLite、CSV、Excel、PostgreSQL、MySQL 适合本地试用；云数仓、搜索引擎和 NoSQL 按需配置服务与凭据。
 
-## 🗄️ Bring Your Data Stack, No Rebuild
+完整列表见 [支持的数据源](docs/zh/reference/supported-datasources.md)。
 
-Connect through Data Gateway adapters: the built-in DTC Growth Review case works out of the box; DuckDB, SQLite, CSV, Excel, PostgreSQL, and MySQL fit local trials; cloud warehouses, search engines, and NoSQL systems plug in with their own services and credentials.
+## 🛡️ 安全边界
 
-<p align="center">
-  <img src="docs/assets/readme/database-wall.png" alt="Supported duduData data sources" width="100%">
-</p>
+- 模型只接收受控上下文；数据库凭据、模型 API Key 和 MCP Token 不进入 `messages`、`context` 或 `forwardedProps`。
+- 所有数据源访问经由 Data Gateway，默认只读，附带 SQL guard、行数限制、超时和字段脱敏。
+- SQL 审计日志、工具调用记录和事件流全程留痕，支持事后复核。
+- 生产级多租户鉴权、集中式 Secret 管理、监控和部署运维需按你的部署方案单独设计，详见 [安全说明](docs/zh/security.md)。
 
-See the full list in [Supported Data Sources](docs/en/reference/supported-datasources.md).
+## 🗺️ 路线图
 
-## 🛡️ Security Boundary
+- [x] **受控数据任务工作台** — Web 与 TUI 共用 TypeScript Agent Runtime、CopilotKit / AG-UI 事件流、可回放运行历史、SQL 审计和统一资产层。
+- [x] **安全数据访问底座** — 数据源注册、连接测试、schema 抓取、表预览、只读 SQL、脱敏、知识库导入、MCP 资源、Skill 包和模型配置。
+- [ ] **统一语义层** — 沉淀指标、实体、关联、血缘和策略，让 Agent 从「猜字段」走向「理解业务口径」，从一次性 SQL 走向可治理的数据操作层。
+- [ ] **自主分析循环** — Agent 规划分析、执行受控实验、审视结论，收敛到有证据支撑的结果。
+- [ ] **评测与可靠性实验室** — NL2SQL、检索、工具调用和端到端任务基准，支撑回归门禁和失败分析。
+- [ ] **企业控制平面** — 身份、RBAC、审批、审计导出、策略即代码、成本限制。
 
-- The model only receives governed context; datasource credentials, model API keys, and MCP tokens never enter `messages`, `context`, or `forwardedProps`.
-- All datasource access goes through Data Gateway — read-only by default, with SQL guardrails, row limits, timeouts, and field masking.
-- SQL audit logs, tool-call records, and event streams are fully persisted for after-the-fact review.
-- Production-grade multi-tenant auth, centralized secret management, monitoring, and deployment operations require a dedicated design for your environment — see [Security](docs/en/security.md).
+欢迎在 issue 和 discussion 里参与路线图讨论。
 
-## 🗺️ Roadmap
+## 📚 文档
 
-- [x] **Governed data-task workbench** — Web and TUI share one TypeScript agent runtime, CopilotKit / AG-UI event stream, replayable run history, SQL audit trail, and unified asset layer.
-- [x] **Safe data access foundation** — Datasource registration, connection testing, schema introspection, table preview, read-only SQL, masking, knowledge imports, MCP resources, skill packages, and model configuration.
-- [ ] **Unified semantic layer** — Durable metrics, entities, relationships, lineage, and policies, moving agents from "guessing fields" to "understanding business definitions" and from one-off SQL to a governable data operating layer.
-- [ ] **Autonomous analyst loops** — Agents that plan investigations, run controlled experiments, critique findings, and converge on evidence-backed conclusions.
-- [ ] **Evaluation and reliability lab** — NL2SQL, retrieval, tool-use, and end-to-end task benchmarks with regression gates and failure forensics.
-- [ ] **Enterprise control plane** — Identity, RBAC, approvals, audit export, policy-as-code, and cost limits.
-
-Roadmap discussions are welcome in issues and discussions.
-
-## 📚 Documentation
-
-| Goal | Read |
+| 你要做什么 | 阅读 |
 | --- | --- |
-| Run the local demo | [Quick Start](docs/en/quick-start.md) |
-| Understand positioning and scope | [Overview](docs/en/overview.md) · [Capabilities](docs/en/capabilities.md) |
-| Use the Web / TUI | [Web workbench guide](docs/en/guides/web-workbench.md) · [TUI guide](docs/en/guides/tui.md) |
-| Connect data sources | [Data sources guide](docs/en/guides/data-sources.md) · [Supported data sources](docs/en/reference/supported-datasources.md) |
-| Integrate via API and runtime | [REST API](docs/en/reference/rest-api.md) · [Agent Runtime & AG-UI](docs/en/reference/agent-runtime.md) |
-| Understand architecture and security | [Architecture overview](docs/en/architecture/overview.md) · [Security](docs/en/security.md) |
+| 本地跑通 demo | [快速开始](docs/zh/quick-start.md) |
+| 了解产品定位与能力边界 | [产品概览](docs/zh/overview.md) · [能力全览](docs/zh/capabilities.md) |
+| 使用 Web / TUI | [Web 工作台指南](docs/zh/guides/web-workbench.md) · [TUI 指南](docs/zh/guides/tui.md) |
+| 接入数据源 | [数据源指南](docs/zh/guides/data-sources.md) · [支持的数据源](docs/zh/reference/supported-datasources.md) |
+| 对接 API 与运行时 | [REST API](docs/zh/reference/rest-api.md) · [Agent Runtime 与 AG-UI](docs/zh/reference/agent-runtime.md) |
+| 理解架构与安全 | [架构概览](docs/zh/architecture/overview.md) · [安全说明](docs/zh/security.md) |
 
-## 🤝 Contributing
+## 🤝 参与贡献
 
-duduData moves quickly, so small, well-scoped PRs are the easiest to merge:
+duduData 迭代很快，小而聚焦的 PR 最容易被合入：
 
-1. Open an issue or discussion first for behavioral, protocol, datasource-adapter, or agent-policy changes.
-2. Keep each PR focused on one runtime boundary or feature area.
-3. Run `npm run build` plus the targeted smoke checks for what you touched (e.g. `npm run smoke:data-gateway`).
-4. Update docs when a change affects setup, APIs, datasource configuration, or user-visible output.
-5. Do not commit credentials, local databases, generated storage, or private benchmark data.
+1. 行为、协议、数据源适配器和 Agent 策略变更，请先开 issue 或 discussion。
+2. 每个 PR 聚焦一个运行时边界或功能区。
+3. 提交前运行 `npm run build` 和改动区域对应的 smoke 检查（如 `npm run smoke:data-gateway`）。
+4. 改动 setup、API、数据源配置或用户可见输出时，同步更新文档。
+5. 不提交凭据、本地数据库、生成的 storage 或私有 benchmark 数据。
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-## 💬 Community
+## 💬 社区与交流
 
-Join the duduData community to discuss the product, roadmap, and real-world adoption with us. Issues and discussions are always welcome too.
+加入 duduData 社区，和我们讨论产品、路线图和落地实践；也欢迎通过 issue 和 discussion 反馈问题、提出想法。
 
-<table align="center">
-  <tr>
-    <td align="center"><strong>Slack Community</strong></td>
-    <td align="center"><strong>QQ Group</strong></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/assets/readme/community-slack-qrcode.png" alt="duduData Slack community QR code" width="300"></td>
-    <td align="center"><img src="docs/assets/readme/community-qq-qrcode.png" alt="duduData QQ group QR code" width="220"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://join.slack.com/t/datafoundry-7bb8405/shared_invite/zt-42qikc65e-DwA~8ltIri_WYWWpRMjCFQ"><strong>Join Slack</strong></a></td>
-    <td align="center"><strong>Group ID</strong><br><code>1048076064</code></td>
-  </tr>
-</table>
+QQ 交流群：`1048076064`。Slack 社区：[加入 Slack](https://join.slack.com/t/datafoundry-7bb8405/shared_invite/zt-42qikc65e-DwA~8ltIri_WYWWpRMjCFQ)。
 
-## 🙏 Acknowledgements
+## 🙏 致谢
 
-duduData is inspired by and built with ideas from excellent open-source projects and communities:
+duduData 受益于这些优秀的开源项目与社区：
 
-- Thanks to the [LINUX DO](https://linux.do/) community for their support and discussions.
-- [Mastra](https://github.com/mastra-ai/mastra) for agent runtime patterns.
-- [AG-UI](https://github.com/ag-ui-protocol/ag-ui) for event stream protocol design.
-- [CopilotKit](https://github.com/CopilotKit/CopilotKit) for agent-native UX patterns.
-- [Ink](https://github.com/vadimdemedes/ink) for terminal UI foundations.
-- [MCP](https://modelcontextprotocol.io) for the tool ecosystem and integration model.
+- 感谢 [LINUX DO](https://linux.do/) 社区的支持与讨论。
+- [Mastra](https://github.com/mastra-ai/mastra)：Agent 运行时模式。
+- [AG-UI](https://github.com/ag-ui-protocol/ag-ui)：事件流协议设计。
+- [CopilotKit](https://github.com/CopilotKit/CopilotKit)：Agent 原生交互体验。
+- [Ink](https://github.com/vadimdemedes/ink)：终端 UI 基础能力。
+- [MCP](https://modelcontextprotocol.io)：工具生态与集成模型。
 
-## 📄 License
+## 📄 许可证
 
-Apache License 2.0. See [LICENSE](LICENSE).
+Apache License 2.0，见 [LICENSE](LICENSE)。
 
-> duduData is under active development. Current code, public docs, and passing smoke checks are the source of truth.
+> duduData 仍在快速开发中，以当前代码、公开文档和 smoke 检查结果为准。
