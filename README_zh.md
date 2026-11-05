@@ -233,12 +233,6 @@ duduData 迭代很快，小而聚焦的 PR 最容易被合入：
 
 详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-## 💬 社区与交流
-
-加入 duduData 社区，和我们讨论产品、路线图和落地实践；也欢迎通过 issue 和 discussion 反馈问题、提出想法。
-
-QQ 交流群：`1048076064`。Slack 社区：[加入 Slack](https://join.slack.com/t/datafoundry-7bb8405/shared_invite/zt-42qikc65e-DwA~8ltIri_WYWWpRMjCFQ)。
-
 ## 🙏 致谢
 
 duduData 受益于这些优秀的开源项目与社区：
