@@ -14,18 +14,6 @@
 </p>
 
 <p align="center">
-  <a href="#-正式态跑通"><strong>快速开始</strong></a>
-  ·
-  <a href="https://datagallery-lab.github.io/datafoundry/"><strong>在线文档</strong></a>
-  ·
-  <a href="docs/zh/reference/supported-datasources.md"><strong>支持的数据源</strong></a>
-  ·
-  <a href="#️-路线图"><strong>路线图</strong></a>
-  ·
-  <a href="#-参与贡献"><strong>参与贡献</strong></a>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0" />
   <img src="https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/self--hostable-local%20first-2ea44f" alt="Self-hostable" />
